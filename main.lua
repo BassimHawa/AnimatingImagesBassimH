@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------------------------
---
--- main.lua
---
+--Title: Animating Images
+--Name: Bassim Hawa
+--Course ICS2O/3C
+--This program displays three images moving in different directions,
+--with some colored text and a background.
 -----------------------------------------------------------------------------------------
-
--- Your code here
