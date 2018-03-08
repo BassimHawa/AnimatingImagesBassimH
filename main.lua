@@ -5,23 +5,29 @@
 --This program displays three images moving in different directions,
 --with some colored text and a background.
 -----------------------------------------------------------------------------------------
+local areaText = display.newText("WE DA BEST MUSIC", 0, 0, Arial, textSize)
+local textSize = 100
 
 -- hide the status bar
 display.setStatusBar(display.HiddenStatusBar)
 
 --global variables
-scrollSpeed = 3
-scrollSpeed2 = -4
-scrollSpeed3 = 2
+scrollSpeed = 2
+scrollSpeed2 = -1
+scrollSpeed3 = 4
 
 --background image with width and height
-local backgroundImage = display.newImageRect("Images/background.jpg", 2048, 1536)
+local backgroundImage = display.newImageRect("Images/space.jpg", 1050, 1010)
+
+--set the position of the background image
+backgroundImage.x = 500
+backgroundImage.y = 400
 
 -- character image with width and height
 local DJKhaled = display.newImageRect("Images/djK.png", 200, 200)
 
 --character image with width and height
-local kitKat = display.newImageRect("Images/kitkat.png", 200, 200)
+local kitKat = display.newImageRect("Images/kitkat.png", 300, 300)
 
 -- character image with width and height
 local mac = display.newImageRect("Images/mac.png", 200, 200)
@@ -34,7 +40,7 @@ DJKhaled.x = 100
 DJKhaled.y = display.contentHeight/3
 
 --set the initial x and y position of kitKat
-kitKat.x = 400
+kitKat.x = 700
 kitKat.y = display.contentHeight*2.5/3
 
 --set the initial x and y position of macaroni
@@ -44,11 +50,11 @@ mac.y = 10
 --Function: MoveKhaled
 --Input: this function accepts an event listener
 --Output: none
---Description: This function adds the scroll speed to the x-value of the ship
+--Description: This function adds the scroll speed to the x-value of Dj Khaled
 local function MoveKhaled(event)
 	  --add the scroll speed to the x-value of DjKhaled
 	  DJKhaled.x = DJKhaled.x + scrollSpeed
-	  -- change the transparency of the ship every time it moves so that it fades in
+	  -- change the transparency of Dj Khaled every time he moves so that he fades in
 	  DJKhaled.alpha = DJKhaled.alpha + 0.01
 	end
 
@@ -62,10 +68,10 @@ Runtime:addEventListener("enterFrame", MoveKhaled)
 local function MovekitKat(event)
 	  --add the scroll speed to the x-value of kitKat
 	  kitKat.x = kitKat.x + scrollSpeed2
-	  -- change the transparency of kitKat every time he moves so that he fades out
-	  kitKat.alpha = kitKat.alpha - 0.01
-	  --make kitKat smaller as he moves
-	  kitKat:scale(1 - 0.01, 1 - 0.01)
+	  -- change the transparency of kitKat every time he moves so that it fades out
+	  kitKat.alpha = kitKat.alpha - 0.0005
+	  --make kitKat smaller as it moves
+	  kitKat:scale(1 - 0.003, 1 - 0.003)
 	end
 
 -- MovekitKat will be called over and over again
@@ -76,7 +82,7 @@ Runtime:addEventListener("enterFrame", MovekitKat)
 --Input: this function accepts an event listener
 --Output: none
 --Description: This function adds the scroll speed to the x-value of the mac
-local function Movemac(event)
+local function MoveMac(event)
 	  --add the scroll speed to the x-value of the mac
 	  mac.x = mac.x + scrollSpeed3
 	  mac.y = mac.y + scrollSpeed3
@@ -87,4 +93,10 @@ local function Movemac(event)
 	end
 
 -- Movemac will be called over and over again
-Runtime:addEventListener("enterFrame", Movemac)
+Runtime:addEventListener("enterFrame", MoveMac)	
+
+
+areaText = display.newText("WE DA BEST MUSIC", 0, 0, Arial, textSize)
+areaText.x = 450
+areaText.y = 400
+areaText:rotate(20)
