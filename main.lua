@@ -13,7 +13,7 @@ display.setStatusBar(display.HiddenStatusBar)
 
 --global variables
 scrollSpeed = 2
-scrollSpeed2 = -1
+scrollSpeed2 = -3
 scrollSpeed3 = 4
 
 --background image with width and height
@@ -40,7 +40,7 @@ DJKhaled.x = 100
 DJKhaled.y = display.contentHeight/3
 
 --set the initial x and y position of kitKat
-kitKat.x = 700
+kitKat.x = 800
 kitKat.y = display.contentHeight*2.5/3
 
 --set the initial x and y position of macaroni
@@ -95,8 +95,46 @@ local function MoveMac(event)
 -- Movemac will be called over and over again
 Runtime:addEventListener("enterFrame", MoveMac)	
 
-
+--Display Dj Khaled's famous catchphrase on the screen
 areaText = display.newText("WE DA BEST MUSIC", 0, 0, Arial, textSize)
-areaText.x = 450
+areaText.x = 475
 areaText.y = 400
 areaText:rotate(20)
+
+--set the text color
+areaText:setTextColor(1, 1, 0)
+
+--Display Dj Khaled's famous catchphrase on the screen, but with a different color, and slightly higher than before
+areaText = display.newText("WE DA BEST MUSIC", 0, 0, Arial, textSize)
+areaText.x = 475
+areaText.y = 390
+areaText:rotate(20)
+areaText:setTextColor(1, 0, 0)
+
+--Display Dj Khaled's famous catchphrase on the screen, but with a different color, and slightly higher than before
+areaText = display.newText("WE DA BEST MUSIC", 0, 0, Arial, textSize)
+areaText.x = 475
+areaText.y = 380
+areaText:rotate(20)
+areaText:setTextColor(0, 1, 0)
+
+--Display Dj Khaled's famous catchphrase on the screen, but with a different color, and slightly higher than before
+areaText = display.newText("WE DA BEST MUSIC", 0, 0, Arial, textSize)
+areaText.x = 475
+areaText.y = 370
+areaText:rotate(20)
+areaText:setTextColor(0, 0, 1)
+
+--Display Dj Khaled's famous catchphrase on the screen, but with a different color, and slightly higher than before
+areaText = display.newText("WE DA BEST MUSIC", 0, 0, Arial, textSize)
+areaText.x = 475
+areaText.y = 360
+areaText:rotate(20)
+areaText:setTextColor(1, 0, 1)
+
+--Display Dj Khaled's famous catchphrase on the screen, but with a different color, and slightly higher than before
+areaText = display.newText("WE DA BEST MUSIC", 0, 0, Arial, textSize)
+areaText.x = 475
+areaText.y = 350
+areaText:rotate(20)
+areaText:setTextColor(0, 1, 1)
