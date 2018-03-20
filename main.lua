@@ -19,7 +19,7 @@ correctSoundChannel = audio.play(correctSound)
 display.setStatusBar(display.HiddenStatusBar)
 
 --global variables
-scrollSpeed = 2
+scrollSpeed = 3.5
 scrollSpeed2 = -3
 scrollSpeed3 = 4
 
