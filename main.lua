@@ -8,6 +8,13 @@
 local areaText = display.newText("WE DA BEST MUSIC", 0, 0, Arial, textSize)
 local textSize = 100
 
+--sounds
+local correctSound = audio.loadSound("Sounds/How Many Times Can DJ Khaled Say We The Best In 40 Seconds  Forbes.mp3")
+local correctSoundChannel
+
+
+correctSoundChannel = audio.play(correctSound)
+
 -- hide the status bar
 display.setStatusBar(display.HiddenStatusBar)
 
